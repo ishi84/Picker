@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour {
 
-	private GameObject target;
+	[SerializeField] private GameObject target;
 	private Transform targetPos;
 
 	[Range(0, 2)][SerializeField]
@@ -12,7 +12,6 @@ public class FollowPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start() {
-		target = GameObject.Find("PlayerChar");
 		targetPos = target.transform;
 	}
 
