@@ -16,8 +16,8 @@ public class MainCameraControll : MonoBehaviour {
 		targetPos = transform.parent.gameObject.transform;
 	}
 
-#if UNITY_IOS
-	//iOSビルド時のカメラ回転感度
+#if (UNITY_IOS || UNITY_ANDROID)
+	//モバイル向けビルド時のカメラ回転感度
 	private float senseX = 0.2f;
 	private float senseY = 0.08f;
 
